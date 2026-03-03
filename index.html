@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品販売ページ - ワイヤーフレーム</title>
+    <title>Raklink（ラクリンク） - クロノス連携ツール</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="xronos_invisi.svg" alt="XR-Bridge Logo">
+                <img src="raklink_logo.png" alt="Raklink Logo">
             </div>
             <nav>
                 <ul>
-                    <li>特徴</li>
-                    <li>詳細機能</li>
+                    <li>機能</li>
                     <li>導入効果</li>
-                    <li>FQA</li>
+                    <li>FAQ</li>
+                    <li>お問い合わせ</li>
                 </ul>
             </nav>
-            <button class="cta-button-header">無料デモ・開発詳細を相談する</button>
+            <button class="cta-button-header">無料相談</button>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -29,12 +29,12 @@
         </div>
         <div class="mobile-menu" id="mobileMenu">
             <ul>
-                <li>特徴</li>
-                <li>詳細機能</li>
+                <li>機能</li>
                 <li>導入効果</li>
-                <li>FQA</li>
+                <li>FAQ</li>
+                <li>お問い合わせ</li>
             </ul>
-            <button class="cta-button-header">無料デモ・開発詳細を相談する</button>
+            <button class="cta-button-header">無料相談</button>
         </div>
     </header>
 
@@ -52,34 +52,50 @@
         </div>
     </section>
 
-
     <section class="features">
         <div class="section-container">
-            <div class="section-title">XR-Bridgeの特徴</div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">01</div>
-                    <div class="feature-title">直感的な連携インターフェース</div>
-                    <div class="feature-description">連携したいファイルと取込レイアウトを選択するだけ。専門知識がなくても、迷わず「実行」ボタン一つで連携が完了します。</div>
+            <div class="section-title">Raklinkの特徴</div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-number">01</div>
+                    <div class="feature-content">
+                        <h3 class="feature-item-title">直感的な連携インターフェース</h3>
+                        <p class="feature-item-description">連携したいファイルと取込レイアウトを選択するだけ。専門知識がなくても、迷わず「実行」ボタン一つで連携が完了します。</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="feature-icon-large">01</div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">02</div>
-                    <div class="feature-title">柔軟なレイアウト変換設定</div>
-                    <div class="feature-description">CSVや固定長など、異なるファイル形式、文字コード（SJIS/UTF-8）、日付フォーマットを自由に定義可能。貴社独自のデータ仕様に柔軟に対応します。</div>
+                <div class="feature-item">
+                    <div class="feature-number">02</div>
+                    <div class="feature-content">
+                        <h3 class="feature-item-title">柔軟なレイアウト変換設定</h3>
+                        <p class="feature-item-description">CSVや固定長など、異なるファイル形式、文字コード（SJIS/UTF-8）、日付フォーマットを自由に定義可能。貴社独自のデータ仕様に柔軟に対応します。</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="feature-icon-large">02</div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">03</div>
-                    <div class="feature-title">多様な打刻パターンに対応</div>
-                    <div class="feature-description">「区分コードによる識別」や「項目ごとの識別」など、複数のデータパターンを想定。複雑な出退勤・外出・戻りデータも正確に変換します。</div>
+                <div class="feature-item">
+                    <div class="feature-number">03</div>
+                    <div class="feature-content">
+                        <h3 class="feature-item-title">多様な打刻パターンに対応</h3>
+                        <p class="feature-item-description">「区分コードによる識別」や「項目ごとの識別」など、複数のデータパターンを想定。複雑な出退勤・外出・戻りデータも正確に変換します。</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="feature-icon-large">03</div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">04</div>
-                    <div class="feature-title">クロノス専用フォーマット準拠</div>
-                    <div class="feature-description">年月日、時刻、IDコード、区分コードなど、クロノスが求める正確な仕様（tmrcd.txt形式）で出力。取込エラーのストレスから解放されます。</div>
+                <div class="feature-item">
+                    <div class="feature-number">04</div>
+                    <div class="feature-content">
+                        <h3 class="feature-item-title">クロノス専用フォーマット準拠</h3>
+                        <p class="feature-item-description">年月日、時刻、IDコード、区分コードなど、クロノスが求める正確な仕様（tmrcd.txt形式）で出力。取込エラーのストレスから解放されます。</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="feature-icon-large">04</div>
+                    </div>
                 </div>
-            </div>
-            <div class="cta-buttons">
-                <button class="cta-button-primary">無料デモ・開発詳細を相談する</button>
             </div>
         </div>
     </section>
@@ -122,7 +138,7 @@
                     <div class="flow-step">手動アップロード</div>
                 </div>
                 <div class="flow-column new">
-                    <div class="flow-title">XR-Bridge導入後</div>
+                    <div class="flow-title">Raklink導入後</div>
                     <div class="flow-step">ファイルを選択して実行</div>
                     <div class="flow-arrow"></div>
                     <div class="flow-step">クロノスへ自動連携完了</div>
@@ -161,15 +177,6 @@
     </section>
 
     <footer>
-        <div class="footer-links">
-            <div class="footer-column">フッターリンク 1</div>
-            <div class="footer-column">フッターリンク 2</div>
-            <div class="footer-column">フッターリンク 3</div>
-            <div class="footer-column">フッターリンク 4</div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-text">コピーライト</div>
-        </div>
     </footer>
 
     <script>
