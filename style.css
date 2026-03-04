@@ -175,7 +175,8 @@ nav ul li:hover {
 }
 
 .hero {
-    background: linear-gradient(135deg, #008B9E 0%, #006680 50%, #004A5E 100%);
+    background: linear-gradient(135deg, rgba(0, 139, 158, 0.85) 0%, rgba(0, 102, 128, 0.90) 50%, rgba(0, 77, 94, 0.92) 100%), 
+                url('xronos_lp_top.jpg') center/cover no-repeat;
     padding: 140px 40px 80px;
     text-align: left;
     position: relative;
@@ -192,7 +193,7 @@ nav ul li:hover {
     right: -200px;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(0, 255, 240, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 255, 240, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     z-index: 0;
     animation: pulse 8s ease-in-out infinite;
@@ -205,7 +206,7 @@ nav ul li:hover {
     left: -250px;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(255, 140, 66, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 140, 66, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     z-index: 0;
     animation: pulse 10s ease-in-out infinite reverse;
