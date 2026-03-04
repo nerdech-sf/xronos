@@ -40,11 +40,12 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">勤怠管理のDXを実現</div>
-            <div class="hero-title">あらゆる打刻データを、一瞬で「クロノス」へ。</div>
-            <div class="hero-description">お手元のCSVや固定長ファイルを、アップロードするだけでクロノス専用形式へ自動変換。手入力や加工の手間をゼロにし、給与計算・勤怠管理のリードタイムを劇的に短縮します。</div>
-            <div class="cta-buttons">
-                <button class="cta-button-primary">無料デモ・開発詳細を相談する</button>
+            <div class="hero-content-text">
+                <div class="hero-title">あらゆる打刻データを、一瞬で「クロノス」へ。</div>
+                <div class="hero-description">お手元のCSVや固定長ファイルを、アップロードするだけでクロノス専用形式へ自動変換。手入力や加工の手間をゼロにし、給与計算・勤怠管理のリードタイムを劇的に短縮します。</div>
+                <div class="cta-buttons">
+                    <button class="cta-button-primary">無料デモ・開発詳細を相談する</button>
+                </div>
             </div>
             <div class="hero-image-container">
                 <img src="main_lp.png" alt="メイン画像" class="hero-main-image">
@@ -63,7 +64,15 @@
                         <p class="feature-item-description">連携したいファイルと取込レイアウトを選択するだけ。専門知識がなくても、迷わず「実行」ボタン一つで連携が完了します。</p>
                     </div>
                     <div class="feature-visual">
-                        <div class="feature-icon-large">01</div>
+                        <div class="feature-icon-svg">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- マウスカーソル -->
+                                <path d="M 30 25 L 30 65 L 42 52 L 48 68 L 55 65 L 49 49 L 65 49 Z" fill="#3EC1D3" stroke="#006680" stroke-width="2"/>
+                                <!-- クリックの波紋 -->
+                                <circle cx="60" cy="40" r="12" fill="none" stroke="#FF6B35" stroke-width="3" opacity="0.6"/>
+                                <circle cx="60" cy="40" r="18" fill="none" stroke="#FF6B35" stroke-width="2" opacity="0.3"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="feature-item">
@@ -73,7 +82,19 @@
                         <p class="feature-item-description">CSVや固定長など、異なるファイル形式、文字コード（SJIS/UTF-8）、日付フォーマットを自由に定義可能。貴社独自のデータ仕様に柔軟に対応します。</p>
                     </div>
                     <div class="feature-visual">
-                        <div class="feature-icon-large">02</div>
+                        <div class="feature-icon-svg">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- スライダー1 -->
+                                <line x1="20" y1="30" x2="80" y2="30" stroke="#3EC1D3" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="55" cy="30" r="7" fill="#FF6B35" stroke="#006680" stroke-width="2"/>
+                                <!-- スライダー2 -->
+                                <line x1="20" y1="50" x2="80" y2="50" stroke="#3EC1D3" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="40" cy="50" r="7" fill="#FF6B35" stroke="#006680" stroke-width="2"/>
+                                <!-- スライダー3 -->
+                                <line x1="20" y1="70" x2="80" y2="70" stroke="#3EC1D3" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="65" cy="70" r="7" fill="#FF6B35" stroke="#006680" stroke-width="2"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="feature-item">
@@ -83,7 +104,19 @@
                         <p class="feature-item-description">「区分コードによる識別」や「項目ごとの識別」など、複数のデータパターンを想定。複雑な出退勤・外出・戻りデータも正確に変換します。</p>
                     </div>
                     <div class="feature-visual">
-                        <div class="feature-icon-large">03</div>
+                        <div class="feature-icon-svg">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- ファイル3枚重ね -->
+                                <rect x="35" y="40" width="35" height="45" rx="3" fill="none" stroke="#3EC1D3" stroke-width="3"/>
+                                <path d="M 55 40 L 55 50 L 70 50 L 70 40" fill="#3EC1D3" opacity="0.3"/>
+                                <line x1="42" y1="55" x2="63" y2="55" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="42" y1="63" x2="58" y2="63" stroke="#3EC1D3" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="42" y1="71" x2="63" y2="71" stroke="#3EC1D3" stroke-width="2.5" stroke-linecap="round"/>
+                                <!-- 後ろのファイル影 -->
+                                <rect x="30" y="35" width="35" height="45" rx="3" fill="none" stroke="#3EC1D3" stroke-width="2" opacity="0.4"/>
+                                <rect x="25" y="30" width="35" height="45" rx="3" fill="none" stroke="#3EC1D3" stroke-width="2" opacity="0.2"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="feature-item">
@@ -93,7 +126,12 @@
                         <p class="feature-item-description">年月日、時刻、IDコード、区分コードなど、クロノスが求める正確な仕様（tmrcd.txt形式）で出力。取込エラーのストレスから解放されます。</p>
                     </div>
                     <div class="feature-visual">
-                        <div class="feature-icon-large">04</div>
+                        <div class="feature-icon-svg">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="#3EC1D3" stroke-width="4"/>
+                                <path d="M 35 50 L 45 60 L 70 35" fill="none" stroke="#FF6B35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
