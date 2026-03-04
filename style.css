@@ -175,7 +175,7 @@ nav ul li:hover {
 }
 
 .hero {
-    background: linear-gradient(135deg, rgba(0, 139, 158, 0.85) 0%, rgba(0, 102, 128, 0.90) 50%, rgba(0, 77, 94, 0.92) 100%), 
+    background: linear-gradient(135deg, rgba(0, 139, 158, 0.92) 0%, rgba(0, 102, 128, 0.94) 50%, rgba(0, 77, 94, 0.96) 100%), 
                 url('xronos_lp_top.jpg') center/cover no-repeat;
     padding: 140px 40px 80px;
     text-align: left;
