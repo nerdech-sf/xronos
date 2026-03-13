@@ -396,9 +396,42 @@ nav {
 
 /* ─── Footer ─── */
 footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); padding: 32px 0; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-.footer-logo { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; color: rgba(255,255,255,.75); text-decoration: none; }
+.footer-inner { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-logo { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; color: rgba(255,255,255,.75); text-decoration: none; flex-shrink: 0; margin-top: 4px; }
+.footer-right { display: flex; flex-direction: column; gap: 6px; text-align: right; max-width: 560px; }
+.footer-note { font-size: 11px; color: rgba(255,255,255,.35); line-height: 1.8; }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,.35); }
+
+/* ─── About ─── */
+#about { background: var(--white); padding: 56px 0; border-bottom: 1px solid var(--border); }
+.about-inner {
+  display: flex; align-items: flex-start; gap: 28px;
+  background: var(--blue-lt); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 36px 40px;
+}
+.about-icon {
+  width: 64px; height: 64px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; overflow: hidden;
+}
+.about-icon img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 16px; }
+.about-text { flex: 1; }
+.about-title {
+  display: block; font-size: 18px; font-weight: 700;
+  color: var(--blue); margin-bottom: 12px; letter-spacing: .01em;
+}
+.about-desc {
+  font-size: 16px; color: var(--ink2); line-height: 1.9; margin-bottom: 20px;
+}
+.about-desc strong { color: var(--ink); font-weight: 700; }
+.about-checks {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 10px 28px;
+}
+.about-checks li {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 14px; font-weight: 600; color: var(--ink2);
+}
+.about-checks li svg { flex-shrink: 0; }
 
 /* ─── Responsive ─── */
 @media(max-width:900px){
