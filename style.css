@@ -505,33 +505,28 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   /* Features section-desc 改行修正 */
   #features .section-desc {
     max-width: 100% !important;
-    text-align: center;
     font-size: 14px;
     word-break: keep-all;
-    overflow-wrap: break-word;
   }
 
-  /* Detail 手描き枠の位置ずれ修正 */
-  .detail-sketch-wrap {
-    overflow: hidden;
-  }
-  .sketch-border {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-  }
+  /* ── Detail ── */
   #detail .section-title { font-size: clamp(20px, 5.5vw, 28px); }
   .detail-item { grid-template-columns: 1fr; gap: 12px; margin-bottom: 48px; }
   .detail-item.reverse { direction: ltr; }
-  .detail-sketch-wrap { padding: 28px 18px; }
   .detail-title { font-size: clamp(20px, 5.5vw, 28px); margin-bottom: 12px; }
   .detail-desc  { font-size: 14px; }
   .detail-label { font-size: 11px; margin-bottom: 10px; }
+  /* スマホでは手描きSVG枠を非表示にしてシンプルなborderに */
+  .sketch-border { display: none; }
+  .detail-sketch-wrap {
+    padding: 28px 18px;
+    border: 2px solid rgba(26,174,192,0.4);
+    border-radius: 16px;
+  }
+  /* 画像を全幅に */
   .detail-visual-wrap {
     width: 100vw;
-    margin-left: calc(-18px);
+    margin-left: -18px;
     border-radius: 0;
     border-left: none;
     border-right: none;
