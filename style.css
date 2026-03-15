@@ -91,7 +91,7 @@ nav {
   margin-bottom: 12px; display: block;
 }
 .section-header { text-align: center; margin-bottom: 72px; }
-#features .section-tag { color: var(--blue-mid); text-transform: none; }
+#features .section-tag { color: var(--blue-mid); text-transform: none !important; letter-spacing: normal; }
 #features .section-title { color: #fff; }
 #features .section-desc { color: rgba(255,255,255,.6); }
 .section-title {
