@@ -511,7 +511,7 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .detail-title { font-size: clamp(20px, 5.5vw, 28px); margin-bottom: 12px; }
   .detail-desc  { font-size: 14px; }
   .detail-label { font-size: 11px; margin-bottom: 10px; }
-  .detail-sketch-wrap { padding: 28px 18px; }
+  .detail-sketch-wrap { padding: 28px 32px 28px 18px; }
   /* 画像を全幅に */
   .detail-visual-wrap {
     width: 100vw;
