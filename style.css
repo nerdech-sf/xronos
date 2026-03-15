@@ -242,7 +242,7 @@ nav {
   transition: transform .35s cubic-bezier(.4,0,.2,1);
 }
 .feature-card .feature-num {
-  font-family:'DM Mono',monospace; font-size:16px; font-weight:500;
+  font-family:'DM Mono',monospace; font-size:20px; font-weight:500;
   color: var(--blue); letter-spacing:.06em;
 }
 .feature-card .feature-icon {
