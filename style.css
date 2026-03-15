@@ -91,7 +91,7 @@ nav {
   margin-bottom: 12px; display: block;
 }
 .section-header { text-align: center; margin-bottom: 72px; }
-#features .section-tag { color: var(--blue-mid); }
+#features .section-tag { color: var(--blue-mid); text-transform: none; }
 #features .section-title { color: #fff; }
 #features .section-desc { color: rgba(255,255,255,.6); }
 .section-title {
@@ -474,7 +474,7 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .flow-node { flex: 1; min-width: 0; }
   .flow-node-icon { width: 44px; height: 44px; border-radius: 12px; }
   .flow-node-icon svg { width: 20px; height: 20px; }
-  .flow-node-name { font-size: 9px; word-break: break-all; }
+  .flow-node-name { font-size: 9px; word-break: break-all; text-align: center; }
   .flow-node-sub  { font-size: 8px; }
   .flow-connector { padding: 0 4px; flex-shrink: 0; }
   .connector-bar  { width: 14px; }
