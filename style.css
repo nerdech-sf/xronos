@@ -32,6 +32,7 @@ body {
   font-size: 15px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
@@ -125,6 +126,7 @@ nav {
   background-size: cover !important;
   background-position: center top !important;
   background-repeat: no-repeat !important;
+  max-width: 100vw;
 }
 #hero::before {
   content: ''; position: absolute; inset: 0; z-index: 0;
@@ -461,21 +463,24 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
   .badge { font-size: 12px; padding: 4px 12px; }
   .hero-title { font-size: clamp(26px, 8vw, 38px); margin-bottom: 16px; }
-  .hero-sub { font-size: 14px; line-height: 1.85; margin-bottom: 28px; }
-  .btn-primary { font-size: 15px; padding: 12px 24px; gap: 8px; }
+  .hero-sub { font-size: 14px; line-height: 1.85; margin-bottom: 28px; max-width: 100%; }
+  .btn-primary { font-size: 15px; padding: 12px 24px; gap: 8px; width: 100%; justify-content: center; }
   .btn-primary svg { width: 15px; height: 15px; }
 
-  /* フロー図：横スクロール対応 */
-  .flow-diagram { padding: 20px 16px 18px; overflow-x: auto; }
-  .flow-diagram-row { min-width: 320px; }
-  .flow-node-icon { width: 48px; height: 48px; border-radius: 12px; }
-  .flow-node-icon svg { width: 22px; height: 22px; }
-  .flow-node-name { font-size: 10px; }
-  .flow-node-sub  { font-size: 9px; }
-  .connector-bar  { width: 18px; }
+  /* フロー図：はみ出し防止 */
+  .hero-visual { width: 100%; overflow: hidden; }
+  .flow-diagram { padding: 20px 12px 18px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .flow-diagram-row { display: flex; flex-wrap: nowrap; min-width: 0; width: 100%; justify-content: space-between; }
+  .flow-node { flex: 1; min-width: 0; }
+  .flow-node-icon { width: 44px; height: 44px; border-radius: 12px; }
+  .flow-node-icon svg { width: 20px; height: 20px; }
+  .flow-node-name { font-size: 9px; word-break: break-all; }
+  .flow-node-sub  { font-size: 8px; }
+  .flow-connector { padding: 0 4px; flex-shrink: 0; }
+  .connector-bar  { width: 14px; }
 
   /* アプリスクショ */
-  .app-screenshot { border-radius: 12px; }
+  .app-screenshot { border-radius: 12px; width: 100%; }
 
   /* ── About ── */
   #about { padding: 40px 0; }
