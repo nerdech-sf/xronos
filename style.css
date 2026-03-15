@@ -504,12 +504,20 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
 
   /* ── Detail ── */
   #detail .section-title { font-size: clamp(20px, 5.5vw, 28px); }
-  .detail-item { grid-template-columns: 1fr; gap: 20px; margin-bottom: 48px; }
+  .detail-item { grid-template-columns: 1fr; gap: 12px; margin-bottom: 48px; }
   .detail-item.reverse { direction: ltr; }
   .detail-sketch-wrap { padding: 28px 20px; }
   .detail-title { font-size: clamp(20px, 5.5vw, 28px); margin-bottom: 12px; }
   .detail-desc  { font-size: 14px; }
   .detail-label { font-size: 11px; margin-bottom: 10px; }
+  /* 画像をコンテナ幅を突き破って端まで広げる */
+  .detail-visual-wrap {
+    margin-left: -18px;
+    margin-right: -18px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
 
   /* ── Before/After ── */
   .flow-compare { grid-template-columns: 1fr; gap: 16px; }
