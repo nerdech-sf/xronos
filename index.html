@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raklink（ラクリンク） - クロノス連携ツール</title>
+  <title>Raklink for Xronos Performance — 勤怠データ自動連携ツール</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,13 +17,17 @@
     <a href="#" class="nav-logo">
       <img src="Raklink_logo1.png" alt="Raklink Logo" />
     </a>
-    <div class="nav-links">
-      <a href="#features">機能</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#features">特徴</a>
+      <a href="#detail">機能詳細</a>
       <a href="#flow">導入効果</a>
+      <a href="#process">導入の流れ</a>
       <a href="#faq">FAQ</a>
-      <a href="#cta">お問い合わせ</a>
-      <a href="#cta" class="btn-nav">無料相談</a>
+      <a href="#cta" class="btn-nav">相談する</a>
     </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -31,7 +35,7 @@
 <section id="hero">
   <div class="container">
     <div class="hero-grid">
-      <!-- Left: text -->
+      <!-- 左：コピー -->
       <div data-reveal>
         <div class="badge">Raklink for Xronos Performance</div>
         <h1 class="hero-title">
@@ -39,71 +43,100 @@
           一瞬で<span class="line-accent">「クロノス」</span>へ。
         </h1>
         <p class="hero-sub">
-          お手元のCSVや固定長ファイルを、アップロードするだけでクロノス専用形式へ自動変換。手入力や加工の手間をゼロにし、給与計算・勤怠管理のリードタイムを劇的に短縮します。
+          CSVや固定長ファイルをアップロードするだけでXronos Performance専用形式へ自動変換。<br>
+          毎月の手加工・エラー修正から解放されます。
         </p>
         <div class="hero-cta-row">
           <a href="#cta" class="btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            無料デモ・開発詳細を相談する
+            導入・運用について相談する
           </a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            初期設定サポートあり
+          </div>
+          <div class="hero-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            専門知識不要
+          </div>
+          <div class="hero-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            クロノス形式に完全準拠
+          </div>
         </div>
       </div>
 
-      <!-- Right: visuals -->
+      <!-- 右：アプリ画面 -->
       <div class="hero-visual" data-reveal data-reveal-delay="120">
-
-        <!-- Flow diagram -->
-        <div class="flow-diagram">
-          <div class="flow-diagram-label">データ変換フロー</div>
-          <div class="flow-diagram-row">
-            <div class="flow-node">
-              <div class="flow-node-icon csv">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              </div>
-              <div class="flow-node-name">CSV / 固定長</div>
-              <div class="flow-node-sub">打刻機の出力データ</div>
-            </div>
-            <div class="flow-connector">
-              <div class="flow-connector-line">
-                <div class="connector-dot"></div>
-                <div class="connector-bar"></div>
-                <div class="connector-arrow"></div>
-              </div>
-              <div class="flow-connector-label">自動変換</div>
-            </div>
-            <div class="flow-node">
-              <div class="flow-node-icon rak">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0E92A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
-              </div>
-              <div class="flow-node-name">Raklink</div>
-              <div class="flow-node-sub">レイアウト定義 · 変換</div>
-            </div>
-            <div class="flow-connector">
-              <div class="flow-connector-line">
-                <div class="connector-dot"></div>
-                <div class="connector-bar"></div>
-                <div class="connector-arrow"></div>
-              </div>
-              <div class="flow-connector-label">即時出力</div>
-            </div>
-            <div class="flow-node">
-              <div class="flow-node-icon xronos">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              </div>
-              <div class="flow-node-name">xronos<br>performance</div>
-              <div class="flow-node-sub">tmrcd.txt 形式</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- App screenshot -->
         <div class="app-screenshot">
           <div class="bar">
             <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
           </div>
           <img src="app_pictures_6.png" alt="Raklink メイン画面" />
         </div>
-
+        <!-- フロー図はaboutセクションに移動 -->
+        <div class="flow-diagram hero-flow-diagram" style="display:none;" data-reveal data-reveal-delay="200">
+        <div class="flow-diagram-label">データ変換フロー — 業務がこれだけシンプルになる</div>
+        <div class="flow-diagram-row">
+          <div class="flow-sources">
+            <div class="flow-source-item">
+              <div class="flow-source-icon" style="background:#FEF3C7; border-color:#FCD34D;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+              </div>
+              <span>Excel管理</span>
+            </div>
+            <div class="flow-source-item">
+              <div class="flow-source-icon" style="background:#FEF3C7; border-color:#FCD34D;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span>タイムレコーダー</span>
+            </div>
+            <div class="flow-source-item">
+              <div class="flow-source-icon" style="background:#FEF3C7; border-color:#FCD34D;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <span>基幹システム</span>
+            </div>
+            <div class="flow-source-label">勤怠データ（CSV/固定長）</div>
+          </div>
+          <div class="flow-connector">
+            <div class="flow-connector-line">
+              <div class="connector-dot"></div>
+              <div class="connector-bar"></div>
+              <div class="connector-arrow"></div>
+            </div>
+            <div class="flow-connector-label">自動変換</div>
+          </div>
+          <div class="flow-node flow-node-center">
+            <div class="flow-node-bare">
+              <img src="Raklink_logo3.png" alt="Raklink" width="72" height="72" style="border-radius:16px; display:block;" />
+            </div>
+            <div class="flow-node-name">Raklink</div>
+            <div class="flow-node-sub">レイアウト定義 · 変換</div>
+          </div>
+          <div class="flow-connector">
+            <div class="flow-connector-line">
+              <div class="connector-dot"></div>
+              <div class="connector-bar"></div>
+              <div class="connector-arrow"></div>
+            </div>
+            <div class="flow-connector-label">即時出力</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-node-bare">
+              <img src="logo.png" alt="Xronos" style="display:block; width:110px; height:auto; background:#fff; border-radius:8px; padding:6px 10px;" />
+            </div>
+            <div class="flow-node-name">Xronos<br>Performance</div>
+            <div class="flow-node-sub">tmrcd.txt 形式</div>
+          </div>
+        </div>
+        <div class="flow-diagram-desc">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          どんな形式の勤怠データも、Raklinkが自動でXronos対応フォーマットへ変換。手作業ゼロで毎月の連携が完了します。
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -112,15 +145,14 @@
 <!-- ─── About ─── -->
 <section id="about">
   <div class="container">
+
+    <!-- 上段：説明テキスト -->
     <div class="about-inner" data-reveal>
-      <div class="about-icon">
-        <img src="Raklink_logo3.png" alt="Raklink" width="64" height="64" />
-      </div>
+
       <div class="about-text">
         <span class="about-title">打刻データをクロノスへ自動連携</span>
         <p class="about-desc">
-          <strong>Raklink for Xronos Performance</strong> は、勤怠システムの打刻データを Xronos Performance 用フォーマットへ自動変換するデータ連携ツールです。<br>
-          CSVや固定長ファイルをアップロードするだけでクロノス用データを自動生成。
+          <strong>Raklink for Xronos Performance</strong> は、勤怠システムの打刻データをXronos Performance用フォーマットへ自動変換するデータ連携ツールです。CSVや固定長ファイルをアップロードするだけでクロノス用データを自動生成。
         </p>
         <ul class="about-checks">
           <li>
@@ -138,16 +170,81 @@
         </ul>
       </div>
     </div>
+
+    <!-- データ変換フロー -->
+    <div class="about-flow-wrap" data-reveal>
+      <div class="flow-diagram about-flow-diagram">
+        <div class="flow-diagram-label">データ変換フロー — 業務がこれだけシンプルになる</div>
+        <div class="flow-diagram-row">
+          <div class="flow-sources">
+            <div class="flow-source-item">
+              <div class="flow-source-icon" style="background:#FEF3C7; border-color:#FCD34D;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+              </div>
+              <span>Excel管理</span>
+            </div>
+            <div class="flow-source-item">
+              <div class="flow-source-icon" style="background:#FEF3C7; border-color:#FCD34D;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span>タイムレコーダー</span>
+            </div>
+            <div class="flow-source-item">
+              <div class="flow-source-icon" style="background:#FEF3C7; border-color:#FCD34D;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <span>基幹システム</span>
+            </div>
+            <div class="flow-source-label">勤怠データ（CSV/固定長）</div>
+          </div>
+          <div class="flow-connector">
+            <div class="flow-connector-line">
+              <div class="connector-dot"></div>
+              <div class="connector-bar"></div>
+              <div class="connector-arrow"></div>
+            </div>
+            <div class="flow-connector-label">自動変換</div>
+          </div>
+          <div class="flow-node flow-node-center">
+            <div class="flow-node-bare">
+              <img src="Raklink_logo3.png" alt="Raklink" width="72" height="72" style="border-radius:16px; display:block;" />
+            </div>
+            <div class="flow-node-name">Raklink</div>
+            <div class="flow-node-sub">レイアウト定義 · 変換</div>
+          </div>
+          <div class="flow-connector">
+            <div class="flow-connector-line">
+              <div class="connector-dot"></div>
+              <div class="connector-bar"></div>
+              <div class="connector-arrow"></div>
+            </div>
+            <div class="flow-connector-label">即時出力</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-node-bare">
+              <img src="logo.png" alt="Xronos" style="display:block; width:110px; height:auto; background:#fff; border-radius:8px; padding:6px 10px;" />
+            </div>
+            <div class="flow-node-name">Xronos<br>Performance</div>
+            <div class="flow-node-sub">tmrcd.txt 形式</div>
+          </div>
+        </div>
+        <div class="flow-diagram-desc">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          どんな形式の勤怠データも、Raklinkが自動でXronos対応フォーマットへ変換。手作業ゼロで毎月の連携が完了します。
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ─── Features ─── -->
+<!-- ─── Features（5つの特長） ─── -->
 <section id="features">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="section-tag">Raklinkの特徴</span>
-      <h2 class="section-title">4つの主要機能</h2>
-      <p class="section-desc">あらゆる打刻データに対応する、柔軟で確実な変換エンジン。</p>
+      <h2 class="section-title">5つの特徴</h2>
+      <p class="section-desc">様々な勤怠データに対応する、柔軟で正確な変換エンジン。</p>
     </div>
     <div class="features-grid">
 
@@ -155,66 +252,250 @@
         <div class="feature-card-top">
           <div class="feature-num">01</div>
           <div class="feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
         </div>
-        <div class="feature-card-title">直感的な連携インターフェース</div>
-        <div class="feature-card-desc">連携したいファイルと取込レイアウトを選択するだけ。専門知識がなくても、迷わず「実行」ボタン一つで連携が完了します。</div>
+        <div class="feature-card-title">多様なファイル形式・文字コードに対応</div>
+        <div class="feature-card-desc">CSV・固定長など異なるファイル形式、文字コード（SJIS/UTF-8）、日付フォーマットを自由に定義可能。貴社独自のデータ仕様に柔軟に対応します。</div>
+        <!-- ① ファイル形式・日付形式の具体的な図 -->
+        <div class="fdiagram-wrap">
+          <div class="fdiagram-col">
+            <div class="fdiagram-label">ファイル形式</div>
+            <div class="fdiagram-items">
+              <div class="fdiagram-item"><span class="fdiagram-icon csv-icon">CSV</span>カンマ区切り</div>
+              <div class="fdiagram-item"><span class="fdiagram-icon fix-icon">固定</span>固定長テキスト</div>
+            </div>
+          </div>
+          <div class="fdiagram-divider">×</div>
+          <div class="fdiagram-col">
+            <div class="fdiagram-label">文字コード</div>
+            <div class="fdiagram-items">
+              <div class="fdiagram-item"><span class="fdiagram-icon enc-icon">S</span>Shift-JIS</div>
+              <div class="fdiagram-item"><span class="fdiagram-icon enc-icon">U</span>UTF-8</div>
+            </div>
+          </div>
+          <div class="fdiagram-divider">×</div>
+          <div class="fdiagram-col">
+            <div class="fdiagram-label">日付形式</div>
+            <div class="fdiagram-items">
+              <div class="fdiagram-item"><span class="fdiagram-icon date-icon">D</span>YYYY/MM/DD</div>
+              <div class="fdiagram-item"><span class="fdiagram-icon date-icon">D</span>YYYYMMDD</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="feature-card" data-reveal data-reveal-delay="80">
         <div class="feature-card-top">
           <div class="feature-num">02</div>
           <div class="feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
         </div>
-        <div class="feature-card-title">柔軟なレイアウト変換設定</div>
-        <div class="feature-card-desc">CSVや固定長など、異なるファイル形式、文字コード（SJIS/UTF-8）、日付フォーマットを自由に定義可能。貴社独自のデータ仕様に柔軟に対応します。</div>
+        <div class="feature-card-title">直観的なインターフェース</div>
+        <div class="feature-card-desc">ファイルを選択して「実行」ボタンを押すだけ。専門的なIT知識は一切不要で、担当者がすぐに使い始められます。</div>
+        <div class="feature-img-wrap">
+          <img src="execute.png" alt="実行画面" />
+        </div>
       </div>
 
       <div class="feature-card" data-reveal data-reveal-delay="160">
         <div class="feature-card-top">
           <div class="feature-num">03</div>
           <div class="feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
           </div>
         </div>
         <div class="feature-card-title">多様な打刻パターンに対応</div>
-        <div class="feature-card-desc">「区分コードによる識別」や「項目ごとの識別」など、複数のデータパターンを想定。複雑な出退勤・外出・戻りデータも正確に変換します。</div>
+        <div class="feature-card-desc">区分コードによる識別・項目ごとの識別など、現場ごとに異なるレイアウトに対応。出退勤・外出・戻りなどの複雑な区分も正確に変換します。</div>
+        <!-- ③ バラバラなレイアウトを統一するイメージ図 -->
+        <div class="flayout-wrap">
+          <div class="flayout-inputs">
+            <div class="flayout-input fi-a">
+              <div class="flayout-row-label">システムA</div>
+              <div class="flayout-mini-row"><span>ID</span><span>日付</span><span>区分01</span></div>
+            </div>
+            <div class="flayout-input fi-b">
+              <div class="flayout-row-label">システムB</div>
+              <div class="flayout-mini-row"><span>社員番号</span><span>出勤</span><span>退勤</span></div>
+            </div>
+            <div class="flayout-input fi-c">
+              <div class="flayout-row-label">システムC</div>
+              <div class="flayout-mini-row"><span>コード</span><span>YYYYMMDD</span><span>HH:MM</span></div>
+            </div>
+          </div>
+          <div class="flayout-arrow">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <span>自動変換</span>
+          </div>
+          <div class="flayout-output">
+            <div class="flayout-row-label out">tmrcd.txt</div>
+            <div class="flayout-mini-row out-row"><span>社員ID</span><span>日付</span><span>区分</span><span>時刻</span></div>
+          </div>
+        </div>
       </div>
 
       <div class="feature-card" data-reveal data-reveal-delay="240">
         <div class="feature-card-top">
           <div class="feature-num">04</div>
           <div class="feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 12 18 15 15"/><line x1="12" y1="12" x2="12" y2="18"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
         </div>
-        <div class="feature-card-title">クロノス専用フォーマット準拠</div>
-        <div class="feature-card-desc">年月日、時刻、IDコード、区分コードなど、クロノスが求める正確な仕様（tmrcd.txt形式）で出力。取込エラーのストレスから解放されます。</div>
+        <div class="feature-card-title">Xronos Performance に準拠</div>
+        <div class="feature-card-desc">年月日・時刻・IDコード・区分コードなど、Xronos Performanceが求める正確な仕様（tmrcd.txt形式）で出力。取込エラーのストレスから解放されます。</div>
+        <!-- ④ Xronos Performanceロゴ＋準拠バッジ -->
+        <div class="fxronos-wrap">
+          <img src="logo.png" alt="Xronos Performance" style="height:40px; width:auto; max-width:180px; object-fit:contain; background:#fff; border-radius:6px; padding:5px 10px;" />
+          <div class="fxronos-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            tmrcd.txt 形式 完全準拠
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-card" data-reveal data-reveal-delay="320">
+        <div class="feature-card-top">
+          <div class="feature-num">05</div>
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+        </div>
+        <div class="feature-card-title">タイマーによる自動実行に対応</div>
+        <div class="feature-card-desc">指定した時刻に自動でデータ変換・連携を実行。毎月の定例作業を完全自動化し、担当者の作業負担をゼロにします。</div>
+        <!-- ⑤ スケジュール設定→自動実行のイメージ図 -->
+        <div class="ftimer-wrap">
+          <div class="ftimer-schedule">
+            <div class="ftimer-schedule-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              実行スケジュール
+            </div>
+            <div class="ftimer-rows">
+              <div class="ftimer-row"><span class="ftimer-when">毎月1日 08:00</span><span class="ftimer-status active">稼働中</span></div>
+              <div class="ftimer-row"><span class="ftimer-when">毎月15日 09:00</span><span class="ftimer-status active">稼働中</span></div>
+            </div>
+          </div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <div class="ftimer-result">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>自動変換・連携 完了</span>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ─── Detail ─── -->
+<!-- ─── Detail（変換パターン図解 ＋ 03の補足として統合） ─── -->
 <section id="detail">
   <div class="container">
     <div class="section-header" data-reveal>
-      <span class="section-tag">詳細機能</span>
-      <h2 class="section-title">かゆいところに手が届く変換設定</h2>
+      <span class="section-tag">機能詳細</span>
+      <h2 class="section-title">あらゆる形式を<em>「クロノス語」</em>に翻訳</h2>
+      <p class="section-desc">取込開始行・区切り文字・文字コードなど、詳細な変換ルールをGUI上で設定。3つのパターンで、どんなデータにも対応します。</p>
     </div>
 
-    <div class="detail-item" data-reveal>
+    <!-- ⑧ 変換パターン3種の図解 -->
+    <div class="pattern-grid" data-reveal>
+
+      <div class="pattern-card">
+        <div class="pattern-badge">パターン A</div>
+        <div class="pattern-title">1対1 変換</div>
+        <div class="pattern-diagram">
+          <div class="pd-col">
+            <div class="pd-label">入力ファイル</div>
+            <div class="pd-box pd-in">
+              <div class="pd-row">社員ID</div>
+              <div class="pd-row">日付</div>
+              <div class="pd-row">出勤時刻</div>
+              <div class="pd-row">退勤時刻</div>
+            </div>
+          </div>
+          <div class="pd-arrow">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <span>変換</span>
+          </div>
+          <div class="pd-col">
+            <div class="pd-label">tmrcd.txt</div>
+            <div class="pd-box pd-out">
+              <div class="pd-row">社員番号</div>
+              <div class="pd-row">YYYYMMDD</div>
+              <div class="pd-row">出勤区分</div>
+              <div class="pd-row">退勤区分</div>
+            </div>
+          </div>
+        </div>
+        <p class="pattern-desc">1つのファイルレイアウトを1つのXronosフォーマットへ変換。最もシンプルな構成。</p>
+      </div>
+
+      <div class="pattern-card">
+        <div class="pattern-badge pattern-badge-b">パターン B</div>
+        <div class="pattern-title">1対多 変換</div>
+        <div class="pattern-diagram">
+          <div class="pd-col">
+            <div class="pd-label">入力ファイル</div>
+            <div class="pd-box pd-in">
+              <div class="pd-row">社員ID</div>
+              <div class="pd-row">日付</div>
+              <div class="pd-row pd-multi">出勤〜退勤<br>外出〜戻り<br>残業…</div>
+            </div>
+          </div>
+          <div class="pd-arrow">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <span>分割変換</span>
+          </div>
+          <div class="pd-col">
+            <div class="pd-label">tmrcd.txt</div>
+            <div class="pd-box pd-out">
+              <div class="pd-row">出勤レコード</div>
+              <div class="pd-row">退勤レコード</div>
+              <div class="pd-row">外出レコード</div>
+              <div class="pd-row">戻りレコード…</div>
+            </div>
+          </div>
+        </div>
+        <p class="pattern-desc">1行の入力データを複数のXronosレコードに展開。複雑な打刻パターンに対応。</p>
+      </div>
+
+      <div class="pattern-card">
+        <div class="pattern-badge pattern-badge-c">パターン C</div>
+        <div class="pattern-title">コード変換</div>
+        <div class="pattern-diagram">
+          <div class="pd-col">
+            <div class="pd-label">元の区分コード</div>
+            <div class="pd-box pd-in">
+              <div class="pd-row">01 → 出勤</div>
+              <div class="pd-row">02 → 退勤</div>
+              <div class="pd-row">03 → 外出</div>
+              <div class="pd-row">04 → 戻り</div>
+            </div>
+          </div>
+          <div class="pd-arrow">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <span>マッピング</span>
+          </div>
+          <div class="pd-col">
+            <div class="pd-label">Xronos区分</div>
+            <div class="pd-box pd-out">
+              <div class="pd-row">区分1</div>
+              <div class="pd-row">区分2</div>
+              <div class="pd-row">区分5</div>
+              <div class="pd-row">区分6</div>
+            </div>
+          </div>
+        </div>
+        <p class="pattern-desc">システム独自の区分コードをXronosの区分コードへ自由にマッピング設定。</p>
+      </div>
+
+    </div>
+
+    <div class="detail-item" data-reveal style="margin-top:80px;">
       <div class="detail-sketch-wrap">
         <svg class="sketch-border" viewBox="0 0 400 280" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M18,8 Q60,4 120,6 Q200,3 280,7 Q340,4 388,10 Q395,12 394,28 Q396,80 393,140 Q396,200 392,250 Q394,268 378,274 Q320,278 240,276 Q160,279 80,275 Q30,277 10,270 Q4,264 6,248 Q4,190 7,130 Q4,70 8,28 Q10,12 18,8 Z"
             fill="none" stroke="#1AAEC0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-            opacity="0.5"
-            style="filter: url(#sketch-filter)"
-          />
+            opacity="0.5" style="filter: url(#sketch-filter)"/>
           <defs>
             <filter id="sketch-filter" x="-5%" y="-5%" width="110%" height="110%">
               <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="2" result="noise"/>
@@ -222,15 +503,15 @@
             </filter>
           </defs>
         </svg>
-        <span class="detail-label">変換設定</span>
-        <h3 class="detail-title">あらゆる形式を<br><em>「クロノス語」</em>に翻訳</h3>
-        <p class="detail-desc">取込開始行の指定や区切り文字の設定など、詳細な変換ルールをGUI上で簡単に設定できます。</p>
+        <span class="detail-label">変換設定画面</span>
+        <h3 class="detail-title">GUI上で<br><em>直感的に設定</em></h3>
+        <p class="detail-desc">取込開始行・区切り文字・日付形式など、詳細な変換ルールをGUI上で簡単に設定。プログラミング知識は不要です。</p>
       </div>
       <div class="detail-visual-wrap">
         <div class="detail-visual-bar">
           <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
         </div>
-        <img src="app_pictures_6.png" alt="設定画面（パターン①）" />
+        <img src="app_pictures_6.png" alt="変換設定画面" />
       </div>
     </div>
 
@@ -239,9 +520,7 @@
         <svg class="sketch-border" viewBox="0 0 400 280" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14,10 Q55,5 115,7 Q200,3 282,8 Q342,5 386,11 Q394,14 393,30 Q396,82 392,142 Q395,202 391,252 Q393,269 376,275 Q318,279 238,277 Q158,280 78,276 Q28,278 9,271 Q3,265 5,249 Q3,191 6,131 Q3,71 7,30 Q9,13 14,10 Z"
             fill="none" stroke="#1AAEC0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-            opacity="0.5"
-            style="filter: url(#sketch-filter2)"
-          />
+            opacity="0.5" style="filter: url(#sketch-filter2)"/>
           <defs>
             <filter id="sketch-filter2" x="-5%" y="-5%" width="110%" height="110%">
               <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="7" result="noise"/>
@@ -249,109 +528,239 @@
             </filter>
           </defs>
         </svg>
-        <span class="detail-label">データ加工</span>
-        <h3 class="detail-title">複雑な計算も<br><em>自動処理</em></h3>
-        <p class="detail-desc">社員IDの抽出範囲指定や、項目のマッピングを自動化。手作業でのExcel加工はもう不要です。</p>
+        <span class="detail-label">データ変換実行</span>
+        <h3 class="detail-title">ボタン一つで<br><em>変換完了</em></h3>
+        <p class="detail-desc">設定済みのレイアウトを選んで実行するだけ。変換結果はその場でプレビュー確認でき、エラーがあれば即座に通知します。</p>
       </div>
       <div class="detail-visual-wrap">
         <div class="detail-visual-bar">
           <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
         </div>
-        <img src="app_pictures_5.png" alt="設定画面（データ加工）" />
+        <img src="app_pictures_5.png" alt="データ変換実行画面" />
       </div>
     </div>
 
     <div style="text-align:center; margin-top: 16px;" data-reveal>
-      <a href="#cta" class="btn-primary">無料デモ・開発詳細を相談する</a>
+      <a href="#cta" class="btn-primary">導入・運用について相談する</a>
     </div>
   </div>
 </section>
 
-<!-- ─── Before/After ─── -->
+<!-- ─── Before/After（⑨ 完全再設計） ─── -->
 <section id="flow">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="section-tag">導入効果</span>
-      <h2 class="section-title">作業時間を大幅削減</h2>
-      <p class="section-desc flow-desc">Raklink導入で作業ステップを大幅削減。<br>毎月の手間から解放されます。</p>
+      <h2 class="section-title">作業が、これだけシンプルになる</h2>
+      <p class="section-desc flow-desc">毎月繰り返す煩雑な手作業が、Raklink導入でたった1ステップに。</p>
     </div>
 
-    <div class="flow-compare" data-reveal>
+    <!-- ⑨ 新Before/After デザイン -->
+    <div class="ba-container" data-reveal>
       <!-- Before -->
-      <div class="flow-col-wrap before-wrap">
-        <div class="flow-col-header bh">
-          <div class="flow-col-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <div class="ba-wrap">
+      <div class="ba-col ba-before">
+        <div class="ba-header bh">
+          <div class="ba-header-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
           </div>
           <div>
-            <div class="flow-col-label before">Before</div>
-            <div class="flow-col-sub">従来の方法</div>
+            <div class="ba-label">Before</div>
+            <div class="ba-sublabel">従来の方法 — 大変</div>
           </div>
         </div>
-        <div class="flow-steps">
-          <div class="flow-step b">
-            <div class="step-num">1</div>
-            <div class="step-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <div class="ba-steps">
+          <div class="ba-step ba-step-bad">
+            <div class="ba-step-num">1</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">打刻データを書き出し</div>
+              <div class="ba-step-note">各システムから手動エクスポート</div>
             </div>
-            <div class="step-text">打刻データを書き出し</div>
           </div>
-          <div class="flow-step b">
-            <div class="step-num">2</div>
-            <div class="step-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+          <div class="ba-step-arrow bad">↓</div>
+          <div class="ba-step ba-step-bad">
+            <div class="ba-step-num">2</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">Excelでクロノス形式へ手加工</div>
+              <div class="ba-step-note">列・コードを手作業で変換</div>
             </div>
-            <div class="step-text">Excelでクロノス形式へ手加工</div>
           </div>
-          <div class="flow-step b">
-            <div class="step-num">3</div>
-            <div class="step-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="ba-step-arrow bad">↓</div>
+          <div class="ba-step ba-step-bad">
+            <div class="ba-step-num">3</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">CSV出力</div>
+              <div class="ba-step-note">クロノス用ファイルとして保存</div>
             </div>
-            <div class="step-text">変換エラーの修正</div>
           </div>
-          <div class="flow-step b">
-            <div class="step-num">4</div>
-            <div class="step-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <div class="ba-step-arrow bad">↓</div>
+          <div class="ba-step ba-step-bad">
+            <div class="ba-step-num">4</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">Xronos手動アップロード</div>
+              <div class="ba-step-note">システムにファイルをアップロード</div>
             </div>
-            <div class="step-text">手動アップロード</div>
+          </div>
+          <div class="ba-step-arrow bad">↓</div>
+          <div class="ba-step ba-step-bad">
+            <div class="ba-step-num">5</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">変換エラーの修正</div>
+              <div class="ba-step-note">エラーを確認して再度手加工・再アップロード</div>
+            </div>
+          </div>
+          <div class="ba-step-arrow bad">↓ 繰り返し</div>
+          <div class="ba-step ba-step-bad">
+            <div class="ba-step-num">6</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">手動アップロード</div>
+              <div class="ba-step-note">修正後に再アップロード</div>
+            </div>
+          </div>
+          <div class="ba-step-arrow bad">↓</div>
+          <div class="ba-step ba-step-bad ba-step-finish">
+            <div class="ba-step-content">
+              <div class="ba-step-title">完了</div>
+            </div>
           </div>
         </div>
+        <div class="ba-result ba-result-bad">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          毎月 数時間の手作業が発生
+        </div>
+      </div>
+      <img src="hard.png" alt="" class="ba-float-img" />
+      </div>
+
+      <!-- 矢印 -->
+      <div class="ba-divider">
+        <div class="ba-divider-arrow">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="ba-divider-label">Raklink<br>導入</div>
       </div>
 
       <!-- After -->
-      <div class="flow-col-wrap after-wrap">
-        <div class="flow-col-header ah">
-          <div class="flow-col-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="ba-wrap">
+      <div class="ba-col ba-after">
+        <div class="ba-header ah">
+          <div class="ba-header-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <div>
-            <div class="flow-col-label after">After</div>
-            <div class="flow-col-sub">Raklink 導入後</div>
+            <div class="ba-label">After</div>
+            <div class="ba-sublabel">Raklink導入後 — らくちん</div>
           </div>
         </div>
-        <div class="flow-steps">
-          <div class="flow-step a">
-            <div class="step-num">1</div>
-            <div class="step-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        <div class="ba-steps">
+          <div class="ba-step ba-step-good">
+            <div class="ba-step-num good">1</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">自動実行（実行ボタン）</div>
+              <div class="ba-step-note">ファイルを選択してボタンを押すだけ</div>
             </div>
-            <div class="step-text">ファイルを選択して実行</div>
           </div>
-          <div class="flow-step a">
-            <div class="step-num">2</div>
-            <div class="step-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <div class="ba-step-arrow good">↓</div>
+          <div class="ba-step ba-step-good">
+            <div class="ba-step-num good">2</div>
+            <div class="ba-step-content">
+              <div class="ba-step-title">Xronos手動アップロード</div>
+              <div class="ba-step-note">変換済みファイルをアップロード</div>
             </div>
-            <div class="step-text">クロノスへ自動連携完了</div>
+          </div>
+          <div class="ba-step-arrow good">↓</div>
+          <div class="ba-step ba-step-good ba-step-finish">
+            <div class="ba-step-content">
+              <div class="ba-step-title">完了</div>
+            </div>
+          </div>
+
+          <div class="ba-empty-space">
+            <div class="ba-time-save">
+              <div class="ba-time-save-num">1/3</div>
+              <div class="ba-time-save-label">のステップで完了</div>
+              <div class="ba-time-save-reason">手作業の繰り返しがなくなり、工数を大幅削減</div>
+            </div>
           </div>
         </div>
+        <div class="ba-result ba-result-good">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          作業時間を大幅削減、ミスもゼロに
+        </div>
+      </div>
+      <img src="easy.png" alt="" class="ba-float-img ba-float-img-after" />
       </div>
     </div>
 
     <div class="flow-cta" data-reveal>
-      <a href="#cta" class="btn-primary">無料デモ・開発詳細を相談する</a>
+      <a href="#cta" class="btn-primary">導入・運用について相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 導入の流れ（⑪ 新規） ─── -->
+<section id="process">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-tag">導入の流れ</span>
+      <h2 class="section-title">5ステップでスムーズに導入</h2>
+      <p class="section-desc">ご相談から運用開始まで、一貫してサポートします。</p>
+    </div>
+    <div class="process-steps" data-reveal>
+
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="process-title">無料相談</div>
+        <div class="process-desc">現在の勤怠管理・システム構成についてヒアリング。導入可否・概算費用をご案内します。</div>
+      </div>
+
+      <div class="process-connector-h"></div>
+
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="process-title">要件ヒアリング</div>
+        <div class="process-desc">ファイル形式・打刻パターン・出力仕様を詳細に確認。変換ルールを設計します。</div>
+      </div>
+
+      <div class="process-connector-h"></div>
+
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+        </div>
+        <div class="process-title">ご提案</div>
+        <div class="process-desc">変換設定の構成案・スケジュール・費用をご提示。ご要望に応じてカスタマイズします。</div>
+      </div>
+
+      <div class="process-connector-h"></div>
+
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/></svg>
+        </div>
+        <div class="process-title">導入・設定</div>
+        <div class="process-desc">レイアウト定義・動作確認・テスト運用を実施。実際のデータで検証し、本番稼働へ移行します。</div>
+      </div>
+
+      <div class="process-connector-h"></div>
+
+      <div class="process-step">
+        <div class="process-num">05</div>
+        <div class="process-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="process-title">運用サポート</div>
+        <div class="process-desc">稼働後も継続的にサポート。仕様変更・追加対応にも柔軟に対応します。</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -396,12 +805,12 @@
   <div class="container">
     <div class="cta-inner" data-reveal>
       <div class="badge cta-badge">今すぐ始める</div>
-      <h2 class="cta-title">今すぐ業務効率化を<br>実現しませんか？</h2>
-      <p class="cta-desc">無料デモで実際の画面をご確認いただけます。<br>お気軽にご相談ください。</p>
+      <h2 class="cta-title">毎月の手作業を、<br>今すぐ自動化しませんか？</h2>
+      <p class="cta-desc">まずは無料でご相談ください。現在の運用状況をお聞きし、<br>最適な導入プランをご提案します。</p>
       <div class="cta-btns">
-        <a href="/cdn-cgi/l/email-protection#452c2b232a052b20372120262d6b262a28" class="btn-cta-main">
+        <a href="#cta" class="btn-cta-main">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          無料デモ・開発詳細を相談する
+          導入・運用について相談する
         </a>
         <a href="#features" class="btn-outline">
           機能詳細を見る →
@@ -415,22 +824,70 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <a href="#" class="footer-logo">Raklink</a>
-      <div class="footer-right">
-        <p class="footer-note">※Xronos Performance はクロノス株式会社の製品です。Raklink for Xronos Performance は、Xronos Performance とのデータ連携を目的としたツールです。</p>
-        <span class="footer-copy">&copy; 2025 nerdech. All rights reserved.</span>
+      <div class="footer-left">
+        <a href="#" class="footer-logo">Raklink</a>
+        <p class="footer-note" style="margin-top:12px;">※Xronos Performance はクロノス株式会社の製品です。Raklink for Xronos Performance は、Xronos Performance とのデータ連携を目的としたツールです。</p>
+      </div>
+      <div class="footer-company">
+        <div class="footer-company-title">会社概要</div>
+        <dl class="footer-dl">
+          <div class="footer-dl-row">
+            <dt>社名</dt>
+            <dd>株式会社ハーモニィ</dd>
+          </div>
+          <div class="footer-dl-row">
+            <dt>適格請求書発行事業者登録番号</dt>
+            <dd>T8180001063888</dd>
+          </div>
+          <div class="footer-dl-row">
+            <dt>本社住所</dt>
+            <dd>〒451-0045 名古屋市西区名駅三丁目10番17号 T名駅ビル2号館</dd>
+          </div>
+          <div class="footer-dl-row">
+            <dt>事業内容</dt>
+            <dd>ビジネスシステムの開発・販売／アプリケーション間データ連携システム構築／IoTソリューション・可視化サービス</dd>
+          </div>
+          <div class="footer-dl-row">
+            <dt>設立</dt>
+            <dd>1998年10月</dd>
+          </div>
+        </dl>
       </div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// Hamburger menu
+var hamburger = document.getElementById('nav-hamburger');
+var navLinks = document.getElementById('nav-links');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  // リンククリックで閉じる
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+    });
+  });
+}
+
 // FAQ accordion
 document.querySelectorAll('.faq-item').forEach(function(item) {
   item.querySelector('.faq-q').addEventListener('click', function() {
     item.classList.toggle('open');
   });
 });
+
+// Form submit (demo)
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'flex';
+  e.target.reset();
+}
 
 // Scroll reveal
 var revealEls = document.querySelectorAll('[data-reveal]');
