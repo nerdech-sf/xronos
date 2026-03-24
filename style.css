@@ -1121,21 +1121,23 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
     display: none;
   }
   .about-flow-diagram .flow-sources {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
   }
   .about-flow-diagram .flow-source-item {
-    font-size: 11px;
+    font-size: 13px;
   }
   .about-flow-diagram .flow-node-bare img {
     width: 64px !important;
     height: 64px !important;
   }
   .about-flow-diagram .flow-node-bare img[alt="Xronos"] {
-    width: 90px !important;
+    width: 100px !important;
+    height: auto !important;
   }
+  .about-flow-diagram .flow-node-name { font-size: 14px !important; }
+  .about-flow-diagram .flow-node-sub  { font-size: 12px !important; }
   .contact-form { padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; }
   .feature-timer-visual { flex-wrap: wrap; }
