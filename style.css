@@ -1152,10 +1152,13 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   /* ── 特徴カード内の図解を縦並びに ── */
   .fdiagram-wrap { flex-direction: column; gap: 6px; align-items: center; }
   .fdiagram-col { width: 100%; max-width: 240px; }
+  .fdiagram-items { align-items: center; }
   .fdiagram-divider { transform: rotate(90deg); }
-  .flayout-wrap { flex-direction: column; align-items: stretch; }
-  .flayout-arrow { flex-direction: column; transform: none; margin: 4px auto; }
-  .flayout-arrow span { writing-mode: horizontal-tb; transform: none; }
+  .flayout-wrap { flex-direction: column; align-items: center; }
+  .flayout-inputs { width: 100%; max-width: 240px; }
+  .flayout-arrow { flex-direction: column; transform: rotate(90deg); margin: 4px auto; }
+  .flayout-arrow span { writing-mode: horizontal-tb; transform: rotate(-90deg); }
+  .flayout-output { width: 100%; max-width: 240px; box-sizing: border-box; }
   .ftimer-wrap { flex-direction: column; align-items: stretch; }
   .ftimer-wrap > svg { transform: rotate(90deg); align-self: center; }
   .ba-container { border-radius: 12px; }
