@@ -1142,6 +1142,18 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .feature-steps { gap: 4px; }
   .pattern-diagram { flex-direction: column; gap: 8px; }
   .pd-arrow { transform: rotate(90deg); }
+  /* ── パターンABC図は横並び維持 ── */
+  .pattern-diagram { flex-direction: row; gap: 6px; align-items: center; }
+  .pd-arrow { transform: none; }
+  .pd-box { padding: 8px 6px; min-width: 0; flex: 1; }
+  .pd-label { font-size: 9px; }
+  /* ── 特徴カード内の図解を縦並びに ── */
+  .fdiagram-wrap { flex-direction: column; gap: 6px; }
+  .fdiagram-divider { transform: rotate(90deg); }
+  .flayout-wrap { flex-direction: column; align-items: stretch; }
+  .flayout-arrow { flex-direction: row; transform: rotate(90deg); margin: 4px auto; }
+  .fxronos-wrap { gap: 8px; }
+  .ftimer-wrap { flex-direction: column; align-items: stretch; }
   .ba-container { border-radius: 12px; }
   .ba-time-save-num { font-size: 40px; }
 }
