@@ -1107,6 +1107,35 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
 }
 @media(max-width:600px){
   .flow-sources { display: none; }
+  .about-flow-diagram .flow-sources { display: flex; }
+  .about-flow-diagram .flow-diagram-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .about-flow-diagram .flow-connector {
+    transform: rotate(90deg);
+    padding: 4px 0;
+  }
+  .about-flow-diagram .flow-connector-label {
+    display: none;
+  }
+  .about-flow-diagram .flow-sources {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .about-flow-diagram .flow-source-item {
+    font-size: 11px;
+  }
+  .about-flow-diagram .flow-node-bare img {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  .about-flow-diagram .flow-node-bare img[alt="Xronos"] {
+    width: 90px !important;
+  }
   .contact-form { padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; }
   .feature-timer-visual { flex-wrap: wrap; }
