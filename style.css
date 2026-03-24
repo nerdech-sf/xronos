@@ -1102,8 +1102,8 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .process-title { margin-bottom: 2px; grid-column: 3; grid-row: 1; }
   .process-desc { grid-column: 3; grid-row: 2; }
   .process-connector-h { width: 2px; height: 20px; margin-top: 0; margin-left: 56px; }
-  .ba-float-img { width: 120px; right: -10px; bottom: -10px; }
-  .ba-float-img-after { width: 120px; right: -10px; bottom: -10px; }
+  .ba-float-img { width: 80px; right: -8px; bottom: -8px; }
+  .ba-float-img-after { width: 80px; right: -8px; bottom: -8px; }
 }
 @media(max-width:600px){
   .flow-sources { display: none; }
@@ -1150,12 +1150,14 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .pd-box { padding: 8px 6px; min-width: 0; flex: 1; }
   .pd-label { font-size: 9px; }
   /* ── 特徴カード内の図解を縦並びに ── */
-  .fdiagram-wrap { flex-direction: column; gap: 6px; }
+  .fdiagram-wrap { flex-direction: column; gap: 6px; align-items: center; }
+  .fdiagram-col { width: 100%; max-width: 240px; }
   .fdiagram-divider { transform: rotate(90deg); }
   .flayout-wrap { flex-direction: column; align-items: stretch; }
-  .flayout-arrow { flex-direction: row; transform: rotate(90deg); margin: 4px auto; }
-  .fxronos-wrap { gap: 8px; }
+  .flayout-arrow { flex-direction: column; transform: none; margin: 4px auto; }
+  .flayout-arrow span { writing-mode: horizontal-tb; transform: none; }
   .ftimer-wrap { flex-direction: column; align-items: stretch; }
+  .ftimer-wrap > svg { transform: rotate(90deg); align-self: center; }
   .ba-container { border-radius: 12px; }
   .ba-time-save-num { font-size: 40px; }
 }
