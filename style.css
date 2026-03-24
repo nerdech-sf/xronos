@@ -1102,8 +1102,8 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .process-title { margin-bottom: 2px; grid-column: 3; grid-row: 1; }
   .process-desc { grid-column: 3; grid-row: 2; }
   .process-connector-h { width: 2px; height: 20px; margin-top: 0; margin-left: 56px; }
-  .ba-float-img { width: 80px; right: -8px; bottom: -8px; }
-  .ba-float-img-after { width: 80px; right: -8px; bottom: -8px; }
+  .ba-float-img { width: 80px !important; right: -8px !important; bottom: -8px !important; }
+  .ba-float-img-after { width: 80px !important; right: -8px !important; bottom: -8px !important; }
 }
 @media(max-width:600px){
   .flow-sources { display: none; }
