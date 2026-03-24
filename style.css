@@ -316,7 +316,7 @@ nav {
   transition: transform .35s cubic-bezier(.4,0,.2,1);
 }
 .feature-card .feature-num {
-  font-family:'DM Mono',monospace; font-size:16px; font-weight:500;
+  font-family:'DM Mono',monospace; font-size:20px; font-weight:500;
   color: var(--blue); letter-spacing:.06em;
 }
 .feature-card .feature-icon {
@@ -689,7 +689,7 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .feature-card  { padding: 52px 46px; border-radius: 26px; }
   .feature-card .feature-icon { width: 72px; height: 72px; top: 40px; right: 40px; border-radius: 20px; }
   .feature-card .feature-icon svg { width: 32px; height: 32px; }
-  .feature-card .feature-num  { font-size: 22px !important; }
+  .feature-card .feature-num  { font-size: 20px !important; }
   .feature-card-title { font-size: 26px !important; margin-bottom: 18px; }
   .feature-card-desc  { font-size: 20px !important; line-height: 2; }
 
@@ -985,7 +985,7 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
 }
 .process-num {
   font-family: 'DM Mono', monospace;
-  font-size: 13px; font-weight: 700; color: var(--blue);
+  font-size: 20px; font-weight: 700; color: var(--blue);
   margin-bottom: 16px; letter-spacing: .08em;
 }
 .process-icon {
