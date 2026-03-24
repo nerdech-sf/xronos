@@ -1156,8 +1156,9 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   .fdiagram-divider { transform: rotate(90deg) !important; }
   .flayout-wrap { flex-direction: column !important; align-items: center !important; flex-wrap: nowrap !important; }
   .flayout-inputs { width: 100% !important; max-width: 240px !important; flex: none !important; }
-  .flayout-arrow { flex-direction: column !important; transform: rotate(90deg) !important; margin: 4px auto !important; }
-  .flayout-arrow span { writing-mode: horizontal-tb !important; transform: rotate(-90deg) !important; }
+  .flayout-arrow { flex-direction: column !important; transform: none !important; margin: 8px auto !important; align-items: center !important; gap: 4px !important; }
+  .flayout-arrow span { writing-mode: horizontal-tb !important; transform: none !important; }
+  .flayout-arrow svg { transform: rotate(90deg) !important; }
   .flayout-output { width: 100% !important; max-width: 240px !important; box-sizing: border-box !important; flex-shrink: unset !important; }
   .ftimer-wrap { flex-direction: column !important; align-items: stretch !important; }
   .ftimer-wrap > svg { transform: rotate(90deg) !important; align-self: center !important; }
