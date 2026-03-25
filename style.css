@@ -62,6 +62,18 @@ nav {
   box-shadow: 0 3px 10px rgba(200,130,0,.45), inset 0 1px 0 rgba(255,255,255,.25);
   transition: filter .15s, transform .15s; font-family: inherit;
 }
+.btn-nav-customer {
+  background: transparent !important;
+  color: var(--blue) !important; -webkit-text-fill-color: var(--blue) !important;
+  border: 1.5px solid var(--blue) !important;
+  box-shadow: none !important;
+}
+.btn-nav-customer:hover { background: var(--blue-lt) !important; }
+.btn-customer {
+  border-color: rgba(255,255,255,0.5) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+.btn-customer:hover { border-color: #fff !important; color: #fff !important; }
 .btn-nav:hover { filter: brightness(1.08); transform: translateY(-1px); color: #ffffff !important; }
 
 .btn-primary {
