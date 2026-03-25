@@ -64,11 +64,11 @@ nav {
 }
 .btn-nav-customer {
   background: transparent !important;
-  color: var(--blue) !important; -webkit-text-fill-color: var(--blue) !important;
-  border: 1.5px solid var(--blue) !important;
+  color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+  border: 1.5px solid var(--ink) !important;
   box-shadow: none !important;
 }
-.btn-nav-customer:hover { background: var(--blue-lt) !important; }
+.btn-nav-customer:hover { background: rgba(0,0,0,.05) !important; }
 .btn-customer {
   border-color: rgba(255,255,255,0.5) !important;
   color: rgba(255,255,255,0.85) !important;
