@@ -461,7 +461,9 @@ nav {
 .cta-badge::before { background: rgba(255,255,255,.6); }
 .cta-title { font-family: 'DM Sans','Noto Sans JP',sans-serif; font-size: clamp(28px,3.5vw,46px); font-weight: 800; letter-spacing: -.025em; color: #fff; margin-bottom: 16px; line-height: 1.28; }
 .cta-desc { font-size: 16px; color: rgba(255,255,255,.65); margin-bottom: 44px; line-height: 1.8; }
-.cta-btns { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.cta-btns { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.cta-btns-row1 { display: flex; justify-content: center; }
+.cta-btns-row2 { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
 .btn-cta-main {
   display: inline-flex; align-items: center; gap: 12px;
   background: linear-gradient(180deg, #FFB800 0%, #E89800 100%);
@@ -632,7 +634,8 @@ footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.08); pa
   #cta { padding: 80px 0; }
   .cta-title { font-size: clamp(22px, 6.5vw, 34px); }
   .cta-desc  { font-size: 14px; margin-bottom: 32px; }
-  .cta-btns  { flex-direction: column; align-items: stretch; gap: 12px; }
+  .cta-btns  { gap: 12px; }
+  .cta-btns-row2 { flex-direction: column; align-items: stretch; gap: 10px; }
   .btn-cta-main { padding: 16px 24px; font-size: 15px; justify-content: center; }
   .btn-outline  { padding: 14px 24px; font-size: 14px; text-align: center; justify-content: center; }
 
